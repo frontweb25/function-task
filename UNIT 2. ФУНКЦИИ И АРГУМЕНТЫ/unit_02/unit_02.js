@@ -83,7 +83,7 @@ const out6 = document.querySelector('.out-6');
 
 function t6(arr, block) {
     
-    block.innerHTML = arr.join(" ");
+    block.innerHTML = arr.join(' ')
     
 }
 
@@ -99,16 +99,15 @@ document.querySelector('.b-6').addEventListener('click', function () {
 const out7 = document.querySelector('.out-7');
 
 function t7(arr = [], block) {
-    if (Array.isArray(arr)) {
-        block.textContent = Array.from(arr).join(" ");
+    if(Array.isArray(arr)) {
+       block.innerHTML = Array.from(arr).join(' ')
     } else {
-        block.textContent = false;
+        block.innerHTML = false
     }
-
 }
 
 document.querySelector('.b-7').addEventListener('click', function () {
-    t7(5, out7);
+    t7([4,5,6,7], out7);
 })
 
 
@@ -136,7 +135,6 @@ document.querySelector('.b-8').addEventListener('click', function () {
 const out9 = document.querySelector('.out-9');
 
 function t9(text = '', block) {
-    
     if(block) {
         block.innerHTML = text.trim().toLowerCase()
     }
@@ -169,7 +167,7 @@ document.querySelector('.b-10').addEventListener('click', function () {
 const out11 = document.querySelector('.out-11');
 
 function t11() {
-    out11.innerHTML = Array.from(arguments).reduce((acc, i) => acc + i) 
+    out11.innerHTML = Array.from(arguments).reduce((acc, i) => acc + i)
 }
 
 document.querySelector('.b-11').addEventListener('click', function () {
@@ -244,7 +242,7 @@ document.querySelector('.b-14').addEventListener('click', function () {
 const out15 = document.querySelector('.out-15');
 
 function t15(num, even, odd) {
-    (num % 2 === 0)  ? even() : odd()
+    (num % 2 === 0) ? even() : odd()
 }
 
 function showOne() {
@@ -257,7 +255,7 @@ function showTwo() {
 
 
 document.querySelector('.b-15').addEventListener('click', function () {
-    t15(4, showOne, showTwo);
+    t15(7, showOne, showTwo);
 })
 
 
