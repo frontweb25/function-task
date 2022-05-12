@@ -7,7 +7,7 @@ const out1 = document.querySelector('.out-1');
 
 function getRandomInt() {
     const min = 117;
-    const max = 132;
+    const max = 133;
     let out = document.querySelector('.out-1');
     let rand =  Math.floor(min + Math.random() * (max  - min));
     out.innerHTML = rand;
