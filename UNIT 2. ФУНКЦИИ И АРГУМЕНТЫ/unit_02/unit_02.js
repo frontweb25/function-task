@@ -7,7 +7,7 @@ function t1(min, max) {
 }
 
 document.querySelector('.b-1').addEventListener('click', function () {
-    t1(120, 15git comm0);
+    t1(120, 150);
 })
 
 
