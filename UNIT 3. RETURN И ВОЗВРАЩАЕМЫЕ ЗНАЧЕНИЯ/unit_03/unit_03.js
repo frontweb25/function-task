@@ -6,7 +6,7 @@ function t1(a, b) {
 }
 
 document.querySelector('.b-1').addEventListener('click', function () {
-    document.querySelector('.out-1').textContent = t1(120, 140);
+    document.querySelector('.out-1').textContent = t1(120, 130);
 });
 
 
