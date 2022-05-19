@@ -1,8 +1,8 @@
 let t = 0;
 function f1() {
-    t = t + 1;
+    t++;
     console.log(t);
-    if (t === 100) {return}
+    if (t === 100) return;
     f1();
 }
 
@@ -24,30 +24,29 @@ function f3() {
     i++;
     out += i + ' ';
     if (i >= 30) return;
-
     f3();
 }
-f3();
-console.log(out);
+// f3();
+// console.log(out);
 
 // лицо с низкой социальной отв...
-function randomInteger(min, max){
-    return Math.floor(Math.random() * (max - min + 1) + min);
+function randomInteger(min, max) {
+    // случайное число от min до (max+1)
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
 }
 
 let s1 = 0;
 function moneyRecursion() {
-    let mony = randomInteger(0, 100);
-   
-    s1 += mony;
-    if(s1 > 400) return;
-  
+    let m = randomInteger(0, 100);
+    console.log('add: ' + m);
+    s1 += m;
+    console.log('sum: ' + s1);
+    if (s1 >= 300) return;
     moneyRecursion();
 }
 
-
-moneyRecursion();
-console.log(s1)
+// moneyRecursion();
 
 function moneyCycle() {
     let s2 = 0;
@@ -122,15 +121,15 @@ let position = 0;
 //     }
 // });
 
-function recursionAnimation(){
-    position++;
-    if(position > 400) return;
+function recursionAnimation() {
+    position = position + 5;
+    if (position > 400) return;
+    document.querySelector('.block').style.left = position + 'px';
     animation();
 }
 
 function animation() {
-    document.querySelector('.block').style.left = position + 'px';
-    setTimeout(recursionAnimation, 5);
+    setTimeout(recursionAnimation, 100);
 }
 
 // animation();
@@ -146,12 +145,14 @@ function fact1(n) {
 }
 // fact1(5);
 
-function factorial(n) {
-    if(n === 0) return 1;
-    else return n * factorial(n - 1);
+let s = 1;
+function fact2(n) {
+    if (n === 0) return;
+    s = s * n;
+    fact2(n - 1);
 }
-
-// console.log(factorial(4))
+// fact2(5);
+// console.log(s);
 
 const tree = document.querySelector('.test');
 // console.log(tree);

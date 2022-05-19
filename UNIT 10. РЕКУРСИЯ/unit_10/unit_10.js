@@ -297,4 +297,3 @@ document.querySelector('.b-10').addEventListener('click', () => {
     }
     document.querySelector('.out-10').innerHTML = ar10res;
 });;
-
