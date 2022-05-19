@@ -282,11 +282,11 @@ let ar10 = {
     }
 }
 
-let ar10_res = [];
+let ar10res = [];
 
 function t10(k, obj) {
     for ( let key in obj) {
-        if (key === 'age') ar10_res.push(k)
+        if (key === 'age') ar10res.push(k)
         else if (typeof obj[key] === 'object') t10(key, obj[key]);
     }
 }
@@ -295,6 +295,6 @@ document.querySelector('.b-10').addEventListener('click', () => {
     for (let key in ar10) {
         t10(key, ar10[key]);
     }
-    document.querySelector('.out-10').innerHTML = ar10_res;
+    document.querySelector('.out-10').innerHTML = ar10res;
 });;
 
